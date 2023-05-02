@@ -4,11 +4,14 @@ import 'package:splashscreen/welocme.dart';
 
 import 'icon.dart';
 import 'image_icon.dart';
+import 'list_builder.dart';
+import 'list_builder2.dart';
+import 'list_separated.dart';
 import 'login.dart';
 import 'login_validation.dart';
 
 void main() {
-  runApp(MaterialApp(home: login2(),debugShowCheckedModeBanner: false,));
+  runApp(MaterialApp(home: list_sep(),debugShowCheckedModeBanner: false,));
 }
 
 class MyApp extends StatefulWidget {
