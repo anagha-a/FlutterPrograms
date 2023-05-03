@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:splashscreen/welcome2.dart';
 import 'package:splashscreen/welocme.dart';
 
+import 'custom_child.dart';
+import 'custom_list.dart';
+import 'grid2.dart';
+import 'gridview.dart';
 import 'icon.dart';
 import 'image_icon.dart';
 import 'list_builder.dart';
@@ -11,7 +15,7 @@ import 'login.dart';
 import 'login_validation.dart';
 
 void main() {
-  runApp(MaterialApp(home: list_sep(),debugShowCheckedModeBanner: false,));
+  runApp(MaterialApp(home: grid2(),debugShowCheckedModeBanner: false,));
 }
 
 class MyApp extends StatefulWidget {
