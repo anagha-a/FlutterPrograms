@@ -5,6 +5,10 @@ import 'package:splashscreen/welocme.dart';
 import 'custom_child.dart';
 import 'custom_list.dart';
 import 'grid2.dart';
+import 'grid_builder.dart';
+import 'grid_extent.dart';
+import 'grid_with_count.dart';
+import 'grid_with_custom.dart';
 import 'gridview.dart';
 import 'icon.dart';
 import 'image_icon.dart';
@@ -15,7 +19,7 @@ import 'login.dart';
 import 'login_validation.dart';
 
 void main() {
-  runApp(MaterialApp(home: grid2(),debugShowCheckedModeBanner: false,));
+  runApp(MaterialApp(home: grid_extent(),debugShowCheckedModeBanner: false,));
 }
 
 class MyApp extends StatefulWidget {
