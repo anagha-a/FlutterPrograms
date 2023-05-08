@@ -4,12 +4,17 @@ import 'package:splashscreen/welocme.dart';
 
 import 'custom_child.dart';
 import 'custom_list.dart';
+import 'drawer example.dart';
+
 import 'grid2.dart';
+
+
 import 'grid_builder.dart';
 import 'grid_extent.dart';
 import 'grid_with_count.dart';
 import 'grid_with_custom.dart';
 import 'gridview.dart';
+
 import 'icon.dart';
 import 'image_icon.dart';
 import 'list_builder.dart';
@@ -18,11 +23,15 @@ import 'list_separated.dart';
 import 'listview_assignment.dart';
 import 'login.dart';
 import 'login_validation.dart';
+import 'newgrid.dart';
+import 'slider.dart';
 import 'stack.dart';
 import 'stack2.dart';
+import 'staggered_grid.dart';
+import 'staggrd2.dart';
 
 void main() {
-  runApp(MaterialApp(home: stack2(),debugShowCheckedModeBanner: false,));
+  runApp(MaterialApp(home: MyApp2(),debugShowCheckedModeBanner: false,));
 }
 
 class MyApp extends StatefulWidget {
