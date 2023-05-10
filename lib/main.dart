@@ -29,9 +29,11 @@ import 'stack.dart';
 import 'stack2.dart';
 import 'staggered_grid.dart';
 import 'staggrd2.dart';
+import 'tabbar.dart';
+import 'tabbar2.dart';
 
 void main() {
-  runApp(MaterialApp(home: MyApp2(),debugShowCheckedModeBanner: false,));
+  runApp(MaterialApp(home: Tabbar2(),debugShowCheckedModeBanner: false,));
 }
 
 class MyApp extends StatefulWidget {
