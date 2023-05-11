@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:splashscreen/botttomnav2.dart';
 import 'package:splashscreen/welcome2.dart';
 import 'package:splashscreen/welocme.dart';
 
+import 'bottomnavigation.dart';
 import 'custom_child.dart';
 import 'custom_list.dart';
 import 'drawer example.dart';
 
+import 'googlebar.dart';
 import 'grid2.dart';
 
 
@@ -33,7 +36,7 @@ import 'tabbar.dart';
 import 'tabbar2.dart';
 
 void main() {
-  runApp(MaterialApp(home: Tabbar2(),debugShowCheckedModeBanner: false,));
+  runApp(MaterialApp(home: MyApp4(),debugShowCheckedModeBanner: false,));
 }
 
 class MyApp extends StatefulWidget {
