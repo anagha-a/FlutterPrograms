@@ -51,6 +51,14 @@ dependencies:
   quickalert: ^1.0.1
   eva_icons_flutter: ^3.1.0
   flutter_svg: ^2.0.5
+  introduction_screen: ^3.1.8
+  dropdown_search: ^5.0.6
+  dio: ^5.1.2
+  custom_searchable_dropdown: ^2.1.1
+  animated_icon_button: ^1.0.2
+  flutter_staggered_animations: ^1.1.1
+  animate_icons: ^2.0.0
+  
  
 dev_dependencies:
   flutter_test:
