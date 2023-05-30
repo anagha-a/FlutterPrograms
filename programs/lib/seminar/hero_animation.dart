@@ -2,13 +2,13 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart' show timeDilation;
-
+// custom class for displaying photo
 class PhotoHero extends StatelessWidget {
   const PhotoHero({
     super.key,
-    required this.photo,
-    this.onTap,
-    required this.width,
+    required this.photo,  //photo asset string 
+    this.onTap,           //action to be perfomed
+    required this.width,  // photo widht to show
   });
 
   final String photo;
@@ -35,13 +35,13 @@ class PhotoHero extends StatelessWidget {
     );
   }
 }
-
+// main class
 class HeroAnimation extends StatelessWidget {
   const HeroAnimation({super.key});
 
   @override
   Widget build(BuildContext context) {
-    timeDilation = 10.0; // 1.0 means normal animation speed.
+    timeDilation = 10.0; // 1.0 means normal animation speed. 10X slower animation 
 
     return Scaffold(
       appBar: AppBar(
