@@ -59,9 +59,19 @@ dependencies:
   flutter_staggered_animations: ^1.1.1
   animate_icons: ^2.0.0
   rive: ^0.11.1
-  hero_animation: ^1.0.0+3
+  search_page: ^2.3.0
   animated_item_picker: ^2.0.0
   reorderable_grid: ^1.0.6
+  image_picker: ^0.8.7+5
+  video_player: ^2.6.1
+  liquid_swipe: ^3.1.0
+  rflutter_alert: ^2.0.7
+  share_plus: ^7.0.2
+  system_alert_window: ^1.2.1
+  flutter_neumorphic: ^3.2.0
+  status_alert: ^1.0.1
+  neumorphic_ui: ^1.0.0
+  
   
  
 dev_dependencies:
