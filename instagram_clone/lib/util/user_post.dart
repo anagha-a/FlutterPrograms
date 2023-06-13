@@ -3,18 +3,21 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(MaterialApp(
       home: UserPosts(
-    name: '',
+    name: '', postPic: '', profilePic: '',
   )));
 }
 
 class UserPosts extends StatelessWidget {
   final String name;
-  UserPosts({required this.name});
+  final String profilePic;
+  final String postPic;
+  const UserPosts({super.key, required this.name, required this.profilePic, required this.postPic});
 
   @override
   Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
           padding: const EdgeInsets.all(16.0),
@@ -24,11 +27,13 @@ class UserPosts extends StatelessWidget {
               Row(
                 children: [
                   //profile photo
-                  Container(
+                Row(children: [
+                    Container(
                     width: 40,
                     height: 40,
                     decoration: BoxDecoration(
-                        color: Colors.grey, shape: BoxShape.circle),
+                      image: DecorationImage(image:AssetImage(profilePic),fit: BoxFit.cover),
+                        shape: BoxShape.circle),
                   ),
                 ],
               ),
@@ -39,13 +44,15 @@ class UserPosts extends StatelessWidget {
                 name,
                 style: TextStyle(fontWeight: FontWeight.bold),
               ),
+                ],),
               Icon(Icons.more_vert)
             ],
           ),
         ),
         Container(
+          decoration: BoxDecoration(image: DecorationImage(image: AssetImage(postPic),fit: BoxFit.cover)),
           height: 300,
-          color: Colors.grey,
+         
         ),
         //below the post - comment,like
         Padding(
@@ -61,9 +68,9 @@ class UserPosts extends StatelessWidget {
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 12.0),
-                    child: Icon(Icons.chat_bubble_outline),
+                    child: ImageIcon(color: Colors.black,AssetImage('assets/images/chat.png'),size: 24,),
                   ),
-                  Icon(Icons.share_outlined)
+                  ImageIcon(color: Colors.black,AssetImage('assets/images/send.png'),size: 24,)
                 ],
               ),
               Icon(Icons.bookmark_outline),
@@ -99,7 +106,7 @@ class UserPosts extends StatelessWidget {
               TextSpan(
                   text: name,
                   style: TextStyle(fontWeight: FontWeight.bold)),
-              TextSpan(text: 'Hey kid')
+              TextSpan(text: ' Hey kid')
             ])))
       ],
     );

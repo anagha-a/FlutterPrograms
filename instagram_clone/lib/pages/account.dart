@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:instagram_clone/util/bubble_stories.dart';
 
+import '../util/account_tab1.dart';
+
 void main() {
   runApp(MaterialApp(
     home: AccountPage(),
@@ -26,7 +28,11 @@ class AccountPage extends StatelessWidget {
                     height: 100,
                     width: 100,
                     decoration: BoxDecoration(
-                        color: Colors.grey[300], shape: BoxShape.circle)),
+                        color: Colors.grey[300],
+                        shape: BoxShape.circle,
+                        image: DecorationImage(
+                            image: AssetImage('assets/images/user1.png'))
+                         )),
 
                 //number of posts,
 
@@ -76,14 +82,25 @@ class AccountPage extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  'Anagha Manojkumar',
-                  style: TextStyle(fontWeight: FontWeight.bold),
+                Row(
+                  children: [
+                    Text(
+                      'Anagha Manojkumar',
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                     ],
                 ),
+                  
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 2.0),
-                  child: Text('This time too shall pass'),
-                )
+                  child: Row(
+                    children: [
+                      Text('This time too shall pass'),
+                    ],
+                  ),
+                  
+                ),
+               
               ],
             ),
           ),
@@ -143,11 +160,11 @@ class AccountPage extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10),
             child: Row(
               children: [
-                BubbleStories(text: 'story 1'),
-                BubbleStories(text: 'story 2'),
-                BubbleStories(text: 'story 3'),
-                BubbleStories(text: 'story 4'),
-                BubbleStories(text: 'story 5'),
+                BubbleStories(text: 'story 1', dp: 'assets/images/user1.png',),
+                BubbleStories(text: 'story 2', dp: 'assets/images/user2.png',),
+                BubbleStories(text: 'story 3', dp: 'assets/images/user3.png',),
+                BubbleStories(text: 'story 4', dp: 'assets/images/user4.png',),
+                // BubbleStories(text: 'story 5', dp: 'assets/images/user1.png',),
               ],
             ),
           ),
@@ -155,20 +172,19 @@ class AccountPage extends StatelessWidget {
           TabBar(
             tabs: [
               Tab(
-                icon: Icon(Icons.grid_3x3_outlined),
+                icon: ImageIcon(color: Colors.black,AssetImage('assets/images/plane.png'))
               ),
               Tab(
-                icon: Icon(Icons.grid_3x3_outlined),
+                icon: ImageIcon(color: Colors.black,AssetImage('assets/images/reel.png'))
               ),
               Tab(
-                icon: Image.network(
-                    'https://www.flaticon.com/free-icons/instagram'),
+                icon: ImageIcon(color: Colors.black,AssetImage('assets/images/avatar.png'))
               ),
             ],
           ),
           Expanded(
               child: TabBarView(
-            children: [AccountPage()],
+            children: [AccountTab()],
           )),
         ],
       )),

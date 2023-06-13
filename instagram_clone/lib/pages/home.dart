@@ -11,14 +11,14 @@ void main() {
 
 class UserHome extends StatelessWidget {
   final List people = [
-    'Anagha',
-    'Sreepad',
-    'Abhilash',
-    'Amjad',
-    'Rafkan',
-    'Sajin',
-    'Abhishek',
-    'Abinish'
+    {"name": 'Anagha', "post": "assets/images/user4.png", "pic": "assets/images/post0.jpg"},//0
+    {"name": 'Sreepad', "post": "assets/images/user1.png", "pic": "assets/images/user1.png"},
+    {"name": 'Abhilash', "post": "assets/images/user6.jpg", "pic": "assets/images/post3.jpg"},
+    {"name": 'Amjad', "post": "assets/images/post4.jpg", "pic": "assets/images/user7.jpg"},
+    {"name": 'Rafkan', "post": "assets/images/user1.png", "pic": "assets/images/user4.png"},
+    {"name": 'Sajin', "post": "assets/images/user2.png", "pic": "assets/images/post1.jpg"},
+    {"name": 'Aswin', "post": "assets/images/user3.png", "pic": "assets/images/post0.jpg"},
+    {"name": 'Abinish', "post": "assets/images/user5.jpg", "pic": "assets/images/post3.jpg"}
   ];
   @override
   Widget build(BuildContext context) {
@@ -32,7 +32,7 @@ class UserHome extends StatelessWidget {
               Text(
                 'Instagram',
                 style: TextStyle(
-                    fontFamily: 'Billabong.ttf',
+                    fontFamily: 'Schyler',
                     fontSize: 32.0,
                     color: Colors.black),
               ),
@@ -45,10 +45,11 @@ class UserHome extends StatelessWidget {
                       color: Colors.black,
                     ),
                   ),
-                  Icon(
-                    Icons.send,
-                    color: Colors.black,
-                  ),
+                  ImageIcon(color: Colors.black,AssetImage('assets/images/messenger.png'),size: 24)
+                  // Icon(
+                  //   Icons.send,
+                  //   color: Colors.black,
+                  // ),
                 ],
               ),
             ],
@@ -63,7 +64,7 @@ class UserHome extends StatelessWidget {
                     scrollDirection: Axis.horizontal,
                     itemCount: people.length,
                     itemBuilder: (context, index) {
-                      return BubbleStories(text: people[index]);
+                      return BubbleStories(text: people[index]["name"], dp: people[index]["pic"],);
                     })),
 
             //posts
@@ -72,7 +73,11 @@ class UserHome extends StatelessWidget {
               child: ListView.builder(
                   itemCount: people.length,
                   itemBuilder: (context, index) {
-                    return UserPosts(name: people[index]);
+                    return UserPosts(
+                      name: people[index]['name'],
+                      postPic: people[index]['post'] ,
+                      profilePic:people[index]['pic'] ,
+                    );
                   }),
             )
           ],

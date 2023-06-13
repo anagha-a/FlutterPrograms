@@ -9,7 +9,8 @@ void main() {
 class ReelsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-    throw UnimplementedError();
+    return Scaffold(
+      body: Text('Reels'),
+    );
   }
 }

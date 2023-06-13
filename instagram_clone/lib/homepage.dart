@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:instagram_clone/pages/account.dart';
+import 'package:instagram_clone/pages/add.dart';
 import 'package:instagram_clone/pages/home.dart';
+import 'package:instagram_clone/pages/reels.dart';
 import 'package:instagram_clone/pages/search.dart';
 
 void main() {
@@ -24,12 +26,13 @@ class _HomepageState extends State<Homepage> {
     });
   }
 
-
 //different pages to navigate to
   final List<Widget> _children = [
-    UserHome(),
-    SearchPage(),
-    AccountPage(),
+    UserHome(), //0
+    SearchPage(), //1
+    AddPage(),
+    ReelsPage(),
+    AccountPage(), //2
   ];
 
   @override
@@ -42,20 +45,34 @@ class _HomepageState extends State<Homepage> {
           type: BottomNavigationBarType.fixed,
           items: [
             BottomNavigationBarItem(
-                icon: Icon(Icons.home, color: Colors.black), label: 'Home'),
+                icon: Icon(Icons.home, color: Colors.black), label: 'Home',backgroundColor: Colors.white),
             BottomNavigationBarItem(
                 icon: Icon(
                   Icons.search,
                   color: Colors.black,
                 ),
-                label: 'Search'),
+                label: 'Search',backgroundColor: Colors.white),
             BottomNavigationBarItem(
                 icon: Icon(Icons.add_box, color: Colors.black), label: 'Add'),
             BottomNavigationBarItem(
-                icon: Icon(Icons.videocam, color: Colors.black),
-                label: 'Reels'),
+                icon: ImageIcon(
+                    color: Colors.black, AssetImage('assets/images/reel.png')),
+                label: 'Reels',backgroundColor: Colors.white),
             BottomNavigationBarItem(
-                icon: Icon(Icons.person, color: Colors.black), label: 'Account')
+                icon: CircleAvatar(
+                  radius: 20,
+                  backgroundImage: NetworkImage(
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQL-L1UhpS9glJRsLpcu8L2COL88RL9e_JIZw&usqp=CAU",
+                  ),
+                ),
+                // child: Image.network("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQL-L1UhpS9glJRsLpcu8L2COL88RL9e_JIZw&usqp=CAU")),
+                // child: ImageIcon(
+                //   NetworkImage(
+                //       'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQL-L1UhpS9glJRsLpcu8L2COL88RL9e_JIZw&usqp=CAU'),
+                //   size: 25,
+                // )),
+                label: 'Account',
+                backgroundColor: Colors.white)
           ]),
     );
   }
