@@ -1,0 +1,83 @@
+{
+  "project_info": {
+    "project_number": "165095080704",
+    "firebase_url": "https://autobooking-b8782-default-rtdb.firebaseio.com",
+    "project_id": "autobooking-b8782",
+    "storage_bucket": "autobooking-b8782.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:165095080704:android:07bdebbf728cef3a4da9e5",
+        "android_client_info": {
+          "package_name": "com.example.driver"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "165095080704-vqkeqmrdo9ut1l47kf7vfpep69oli5s6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC6XArZ3XAEleNiAXcIcYfWvFJrya9jAGs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "165095080704-vqkeqmrdo9ut1l47kf7vfpep69oli5s6.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "165095080704-tc9lfv9dr6h3fgfv5iafc4bkmjqrieu1.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.driver"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:165095080704:android:6eadd5ba73ba64b44da9e5",
+        "android_client_info": {
+          "package_name": "com.example.passenger"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "165095080704-vqkeqmrdo9ut1l47kf7vfpep69oli5s6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC6XArZ3XAEleNiAXcIcYfWvFJrya9jAGs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "165095080704-vqkeqmrdo9ut1l47kf7vfpep69oli5s6.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "165095080704-tc9lfv9dr6h3fgfv5iafc4bkmjqrieu1.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.driver"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
